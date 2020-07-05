@@ -1,0 +1,30 @@
+.social__list {
+	display: flex;
+	align-items: center;
+   justify-content: center;
+   margin-left: auto;
+	margin-right: auto;
+}
+.social__item:not(:last-child) {
+	margin-right: 10px;
+}
+.social__link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+   width: 44px;
+   height: 44px;
+   border-radius: 50%;
+	background-color: transparent;
+	fill: $socialSvgColor;
+	transition: background-color 250ms $mainBezier, fill 250ms $mainBezier;
+	&:hover,
+	&:focus {
+		background-color: $accentColor;
+		fill: $whiteTextColor;
+	}
+}
+.social__icon{
+	width: 20px;
+	height: 20px;
+}

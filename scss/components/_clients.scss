@@ -1,0 +1,65 @@
+.clients {
+	background-color: $primaryBgColor;
+}
+.clients__container{
+	margin-top: 94px;
+	margin-bottom: 94px;
+}
+.clients__title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.16;
+	text-align: center;
+	color: $titleTextColor;
+	margin-bottom: 50px;
+}
+.clients__list {
+	display: flex;
+	margin: -15px;
+}
+.clients__item {
+   margin: 15px;
+}
+.clients__icon{
+	&--ya-co{
+	width: 45px;
+	height: 50px;
+	}
+	&--co{
+	width: 40px;
+	height: 52px;
+	}
+	&--company{
+		width: 41px;
+		height: 43px;
+	}
+	&--foster{
+		width: 80px;
+		height: 42px;
+	}
+	&--brand{
+		width: 59px;
+		height: 47px;
+	}
+	&--tag{
+		width: 89px;
+		height: 46px;
+	}
+}
+.clients__link {
+	width: 170px;
+	height: 90px;
+	display: flex;
+   align-items: center;
+	justify-content: center;
+	border: 1px solid $borderMainColor;
+	border-radius: 4px;
+	fill: $socialSvgColor;
+	transition: border-color 250ms $mainBezier, fill 250ms $mainBezier;
+
+	&:hover,
+	&:focus {
+		border-color: $accentColor;
+		fill: $accentColor;
+	}
+}

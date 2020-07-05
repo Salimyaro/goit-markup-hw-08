@@ -1,0 +1,48 @@
+.backdrop{
+	position: fixed;
+	background-color: $transparentBackdropColor;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: opacity 250ms $mainBezier, transform 250ms $mainBezier;
+}
+.backdrop--hiden{
+	transform: scale(0.5);
+	opacity: 0;
+	pointer-events: none;
+}
+.modal{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 528px;
+	min-height: 81px;
+	padding: 40px;
+	background-color: $primaryBgColor;
+	box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+	border-radius: 4px;
+}
+.modal__close{
+	position: absolute;
+	display: flex;
+   align-items: center;
+   justify-content: center;
+	top: 8px;
+	right: 8px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: $primaryBgColor;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.modal__close-icon{
+	width: 18px;
+	height: 18px;
+	fill: #000;
+	transition: fill 250ms $mainBezier;
+	.modal__close:hover & {
+		fill: $accentColor;
+	}
+}

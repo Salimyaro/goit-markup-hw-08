@@ -1,0 +1,39 @@
+.examples {
+	background-color: $primaryBgColor;
+}
+.examples__container{
+	padding-bottom: 94px;
+}
+.examples__title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.16;
+	text-align: center;
+	color: $titleTextColor;
+}
+.examples__title{
+	margin-bottom: 50px;
+}
+.examples__list {
+	display: flex;
+	margin: -15px;
+}
+.example-card {
+	position: relative;
+	width: 370px;
+	margin: 15px;
+}
+.example-card__image {
+	display: block;
+}
+.example-card__title {
+	position: absolute;
+	width: 100%;
+	transform: translate3d(0, -100%, 0);
+	font-weight: 700;
+	line-height: 70px;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: $transparentBgColor;
+	color: $whiteTextColor;
+}

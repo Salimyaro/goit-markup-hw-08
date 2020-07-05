@@ -1,0 +1,116 @@
+.footer{
+	background-color: $footerBgColor;
+}
+.footer__container{
+	display: flex;
+	align-items: baseline;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+/* logo ------------------------------------------------------------------------------------*/
+.footer__logo {
+	color: $whiteTextColor;
+	font-style: normal;
+	margin-bottom: 20px;
+}
+
+/* Adress ----------------------------------------------------------------------------------*/
+.address {
+	margin-right: 69px;
+}
+.address__list {
+	line-height: 1.7;
+	font-style: normal;
+}
+.address__item:not(:last-child){
+	margin-bottom: 9px;
+}
+.address__street {
+	color: $whiteTextColor;
+	text-decoration: none;
+}
+.address__mail,
+.address__tel {
+	color: rgba(255, 255, 255, .6);
+	text-decoration: none;
+}
+.footer__link {
+	background-color: rgba(255, 255, 255, 0.1);
+	fill: $whiteTextColor;
+}
+
+/* Social & Subscribe-----------------------------------------------------------------------*/
+.social{
+	margin-right: auto;
+}
+.social__title,
+.subscribe__title{
+	display: block;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $whiteTextColor;
+	font-style: normal;
+	margin-bottom: 20px;
+}
+.subscribe__form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.subscribe__field{
+	position: relative;
+	margin-right: 12px;
+}
+.subscribe__input {
+	width: 358px;
+	height: 50px;
+	padding-left: 12px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 4px;
+	background-color: transparent;
+	font-size: 16px;
+	line-height: 1.25px;
+	letter-spacing: 0.03em;
+	color: $footerFormText;
+}
+.subscribe__label {
+	position: absolute;
+	left: 16px;
+	top: 49%;
+	transform: translateY(-50%);
+	font-size: 16px;
+	line-height: 1.25px;
+	letter-spacing: 0.03em;
+	color: $footerFormText;
+	transition: transform 250ms $mainBezier;
+
+	.subscribe__input:not(:placeholder-shown) + &,
+	.subscribe__field:focus-within & {
+		transform: translateX(-75px);
+	}
+
+	&::after{
+		content: ':';
+		opacity: 0;
+		transition: opacity 250ms $mainBezier;
+	}
+
+	.subscribe__input:not(:placeholder-shown) + &::after,
+	.subscribe__field:focus-within &::after {
+		opacity: 1;
+	}
+}
+
+.subscribe__button {
+	display: inline-flex;
+   justify-content: center;
+   align-items: center;
+}
+.subscribe__button-text {
+	margin-right: 10px;
+}
+.subscribe__icon {
+	width: 24px;
+	height: 24px;
+}

@@ -1,0 +1,135 @@
+.form__title{
+	display: block;
+	margin-bottom: 30px;
+	font-size: 20px;
+	line-height: 1.15;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: $titleTextColor;
+}
+.form__field {
+	display: block;
+	position: relative;
+	margin-bottom: 28px;
+
+	&:nth-child(4){
+		margin-bottom: 20px;
+	}
+}
+.form__input {
+	width: 100%;
+	margin: 0;	
+	padding: 12px 42px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	transition: border 250ms $mainBezier;
+
+	.form__field:focus-within & {
+		border: 1px solid $accentColor;
+	}
+}
+.form__label {
+	position: absolute;
+	pointer-events: none;
+	left: 42px;
+	top: 50%;
+	transform: translateY(-50%);
+	letter-spacing: 0.01em;
+	transition: color 250ms $mainBezier, transform 250ms $mainBezier;
+
+	.form__field:focus-within &,
+	.form__input:not(:placeholder-shown) + & {
+		transform: translate3d(-25px, -40px, 0);
+	}
+
+	.form__field:focus-within & {
+		color: $accentColor;
+	}
+}
+.form__icon {
+	display: inline-block;
+	position: absolute;
+	pointer-events: none;
+	left: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 18px;
+	height: 18px;
+	fill: $titleTextColor;
+	transition: fill 250ms $mainBezier;
+
+	.form__field:focus-within & {
+		fill: $accentColor;
+	}
+}
+.form__label--comment {
+	left: 16px;
+	top: 12px;
+	transform: translateY(0%);
+
+	.form__field:focus-within &,
+	.form__input:not(:placeholder-shown) + & {
+		transform: translate3d(0, -32px, 0);
+	}
+}
+.form__input--comment {
+	resize: none;
+	min-height: 120px;
+	padding: 8px 16px;
+}
+
+/* .form__icon--terms {
+	background-color: transparent;
+	fill: transparent;
+	width: 16px;
+	height: 15px;
+	box-sizing: border-box;
+	border: 2px solid var(--title-text-color);
+	border-radius: 2px;
+} */
+/* .form__input--terms:checked + .form__icon--terms {
+	background-color: var(--accent-color);
+	fill: #fff;
+	border: transparent;
+} */
+
+.form__field--terms {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+.form__label--terms {
+	position: relative;
+	padding-left: 22px;
+
+	&::before {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		margin-right: 7px;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0px;
+		width: 16px;
+		height: 15px;
+		border: 2px solid $titleTextColor;
+		border-radius: 2px;
+		transition: border-color 250ms $mainBezier, background-color 250ms $mainBezier;
+	}
+	
+	.form__input--terms:checked + &::before {
+		background-color: $accentColor;
+		background-image: url(../images/icon/check.svg);
+		background-size: contain;
+		background-origin: border-box;
+		border-color: transparent;
+	}
+}
+.form__link--terms {
+	color: $accentColor;
+}
+.form__button{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

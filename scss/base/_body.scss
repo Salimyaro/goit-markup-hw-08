@@ -1,0 +1,44 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+body {
+	background-color: $primaryBgColor;
+	color: $primaryTextColor;
+	font-family: $primaryFont;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: .03em;
+	margin: 0;
+}
+h1,h2,h3,h4,h5,h6,p{
+	font-size: inherit;
+	margin: 0;    
+}
+button{
+	letter-spacing: inherit;
+	word-spacing: inherit;
+	text-transform: inherit;
+	display: inline-block;
+	text-align: center;
+	align-items: flex-start;
+	margin: 0;
+	font: inherit;
+	padding: 0;
+	border-width: 0px;
+	border-style: none;
+	border-color: transparent;
+	border-image: initial;
+	cursor: pointer;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.container {
+	width: $containerWidth;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}

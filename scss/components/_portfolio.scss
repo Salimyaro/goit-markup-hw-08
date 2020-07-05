@@ -1,0 +1,100 @@
+.portfolio {
+	background-color: $primaryBgColor;
+	border-top: 1px solid #ECECEC;
+}
+.portfolio__container{
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+/* Filter --------------------------------------------------------------------------------- */
+.filter {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+.filter__item:not(:last-child) {
+	margin-right: 8px;
+}
+.filter__text {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 26px;
+	text-align: center;
+	color: $titleTextColor;
+	background-color: $secondaryBgColor;
+	border-radius: 4px;
+	padding: 6px 22px;
+	transition: background-color 250ms $mainBezier, box-shadow 250ms $mainBezier, color 250ms $mainBezier;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $whiteTextColor;
+		background-color: $accentColor;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+	}
+}
+
+/* Portfolio items ------------------------------------------------------------------------ */
+.portfolio__list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -15px;
+}
+.portfolio__item {
+	margin: 15px;
+	background: $primaryBgColor;
+}
+.portfolio__link {
+	display: block;
+	text-decoration: none;
+	transition: box-shadow 250ms $mainBezier;
+
+	&:hover,
+	&:focus{
+		box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+	}
+}
+.portfolio__image-thumb {
+	position: relative;
+	overflow: hidden;
+}
+.portfolio__content{
+	border: 1px solid $borderPortfolioColor;
+	border-top: transparent;
+}
+.portfolio__title {
+	padding-top: 20px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 2;
+	letter-spacing: 0.06em;
+	color: $titleTextColor;
+	padding-left: 24px;
+}
+.portfolio__text {
+	font-size: 16px;
+	line-height: 1.88;
+	color: $primaryTextColor;
+	padding-left: 24px;
+	padding-top: 4px;
+	padding-bottom: 20px;
+}
+.portfolio__hover-text-wrapper{
+	position: absolute;
+	padding: 63px 24px;
+	background-color: $portfolioHoverColor;
+	transition: transform 250ms $mainBezier;
+
+	.portfolio__link:hover &,
+	.portfolio__link:focus & {
+		transform: translateY(-100%);
+	}
+}
+.portfolio__hover-text {
+	font-size: 18px;
+	line-height: 1.56;
+	color: $whiteTextColor;
+}
