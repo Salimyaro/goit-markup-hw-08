@@ -1,3 +1,128 @@
+/**
+ * Minified by jsDelivr using clean-css v4.2.1.
+ * Original file: /npm/modern-normalize@0.6.0/modern-normalize.css
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+/*! modern-normalize v0.6.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+body {
+  font-family: system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
+}
+
+hr {
+  height: 0;
+}
+
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, pre, samp {
+  font-family: SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, select {
+  text-transform: none;
+}
+
+[type=button], [type=reset], [type=submit], button {
+  -webkit-appearance: button;
+}
+
+[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+[type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: .35em .75em .625em;
+}
+
+legend {
+  padding: 0;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+summary {
+  display: list-item;
+}
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -13,31 +138,6 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  font-size: inherit;
-  margin: 0;
-}
-
-button {
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  text-transform: inherit;
-  display: inline-block;
-  text-align: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin: 0;
-  font: inherit;
-  padding: 0;
-  border-width: 0px;
-  border-style: none;
-  border-color: transparent;
-  -o-border-image: initial;
-     border-image: initial;
-  cursor: pointer;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -45,21 +145,40 @@ img {
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
+@media screen and (max-width: 479px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
 .list {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.interactive {
-  outline: none;
 }
 
 .visually-hidden {
@@ -304,7 +423,8 @@ img {
   display: inline-block;
   color: #000000;
   font-family: 'Raleway', sans-serif;
-  font-size: 26px;
+  font-size: 24px;
+  line-height: 1.17;
   font-weight: 700;
   letter-spacing: .03em;
   text-decoration: none;
@@ -314,6 +434,14 @@ img {
   color: #2196F3;
 }
 
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ECECEC;
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -321,45 +449,87 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.header__logo {
+  padding-top: 16px;
+  padding-bottom: 16px;
   margin-right: auto;
 }
 
-.nav__logo {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  margin-right: 85px;
+.header__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  fill: #212121;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__button:hover, .header__button:focus {
+  fill: #2196F3;
+}
+
+@media screen and (min-width: 768px) {
+  .header__button {
+    display: none;
+  }
+}
+
+.header__burger-icon {
+  display: block;
+}
+
+.header__button.is-open .header__open-icon {
+  display: none;
+}
+
+.header__close-icon {
+  display: none;
+}
+
+.header__button.is-open .header__close-icon {
+  display: block;
+}
+
+.header__content {
+  position: absolute;
+  left: 0;
+  top: 61px;
+  z-index: -20;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 60px;
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__button.is-open + .header__content {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .nav__list,
 .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-weight: 500;
   letter-spacing: .02em;
-}
-
-.nav__item:not(:last-child) {
-  margin-right: 50px;
 }
 
 .contacts {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.contacts__item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .contacts__icon-envelope {
@@ -408,12 +578,6 @@ img {
 .contacts__link:hover, .contacts__link:focus {
   color: #2196F3;
   fill: #2196F3;
-}
-
-.nav__text,
-.contacts__text {
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .nav__link--current {
@@ -466,8 +630,8 @@ img {
 .hero-section__title {
   max-width: 700px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: .06em;
   text-transform: uppercase;
@@ -485,9 +649,6 @@ img {
 }
 
 .benefits__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: -15px;
 }
 
@@ -551,15 +712,12 @@ img {
 }
 
 .examples__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: -15px;
 }
 
 .example-card {
   position: relative;
-  width: 370px;
+  max-width: 370px;
   margin: 15px;
 }
 
@@ -599,9 +757,6 @@ img {
 }
 
 .team__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: -15px;
 }
 
@@ -656,9 +811,6 @@ img {
 }
 
 .clients__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: -15px;
 }
 
@@ -853,9 +1005,6 @@ img {
 }
 
 .footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
@@ -916,9 +1065,6 @@ img {
 }
 
 .subscribe__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -933,7 +1079,7 @@ img {
 }
 
 .subscribe__input {
-  width: 358px;
+  max-width: 358px;
   height: 50px;
   padding-left: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
