@@ -9,8 +9,8 @@
 
 /* Filter --------------------------------------------------------------------------------- */
 .filter {
-	display: flex;
-	justify-content: center;
+	// display: flex;
+	// justify-content: center;
 	margin-bottom: 50px;
 }
 .filter__item:not(:last-child) {
@@ -24,6 +24,8 @@
 	text-align: center;
 	color: $titleTextColor;
 	background-color: $secondaryBgColor;
+	border: none;
+	outline: none;
 	border-radius: 4px;
 	padding: 6px 22px;
 	transition: background-color 250ms $mainBezier, box-shadow 250ms $mainBezier, color 250ms $mainBezier;

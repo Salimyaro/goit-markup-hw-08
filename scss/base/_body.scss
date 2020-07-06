@@ -9,6 +9,11 @@ body {
 	font-weight: 400;
 	letter-spacing: .03em;
 	margin: 0;
+	@media screen and (max-width:$containerWidthDesktop - 1) {
+		&.modal-open {
+			overflow: hidden;
+		}
+}
 }
 img {
 	display: block;

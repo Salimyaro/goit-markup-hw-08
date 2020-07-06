@@ -1,21 +1,31 @@
 .header{
-	position: fixed;
 	width: 100%;
-	z-index: 10;
+	z-index: 100;
 	background-color: $primaryBgColor;
 	border-bottom: 1px solid #ECECEC;
+
+	@media screen and (max-width:$containerWidthDesktop - 1){
+		position: fixed;
+	}
 }
 
 .header__container{
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 }
 
 .header__logo{
 	padding-top: 16px;
 	padding-bottom: 16px;
 	margin-right: auto;
+
+	@media screen and (min-width:$containerWidthTablet) {
+		margin-right: 81px;
+	}
+
+	@media screen and (min-width:$containerWidthDesktop) {
+		margin-right: 85px;
+	}
 }
 .header__button{
 	display: inline-flex;
@@ -25,10 +35,12 @@
 	border: none;
 	fill: $titleTextColor;
 	transition: fill 250ms $mainBezier;
+
 	&:hover,
 	&:focus {
 		fill: $accentColor;
 	}
+
 	@media screen and (min-width:$containerWidthTablet) {
 		display: none;
 	}
@@ -51,46 +63,96 @@
 	}
 }
 
-.header__content{
-	position: absolute;
-	left: 0;
-	top: 61px;
-	z-index: -20;
+.header__content-thumb{
 	width: 100%;
-	background-color: $primaryBgColor;
-	padding: 60px;
-	transform: translateY(-120%);
-	transition: transform 250ms $mainBezier;
-	.header__button.is-open + & {
-		transform: translateY(0%);
+
+	@media screen and (max-width:$containerWidthTablet - 1) {
+		overflow: hidden;
+		position: absolute;
+		pointer-events: none;
+		left: 0;
+		top: 101%;
+		padding-bottom: 5px;
 	}
 }
 
-.nav{
-	// display: flex;
-	// align-items: center;
-	// margin-right: auto;
-	// text-align: center;
+.header__content{
+	@media screen and(max-height:$containerWidthMobile) {
+		padding: 0;
+	}
+
+	@media screen and (max-width:$containerWidthTablet - 1) {
+		background-color: $primaryBgColor;
+		padding: 40px;
+		pointer-events: all;
+		transform: translateY(-102%);
+		transition: transform 250ms $mainBezier;
+		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
+
+		.header__content-thumb.is-open & {
+			transform: translateY(0%);
+		}
+	}
+
+	@media screen and (min-width:$containerWidthTablet){
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 }
 
-
 .nav__list,
-.contacts{
-	// display: flex;
+.contacts {
 	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.17;
 	letter-spacing: .02em;
+
+	@media screen and (max-width:$containerWidthTablet - 1){
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.nav__list{
+	@media screen and (max-width:$containerWidthTablet - 1){
+		margin-bottom: 20px;
+	}
+
+	@media screen and (min-width:$containerWidthTablet){
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		line-height: 1.15;
+	}
+}
+
+.contacts{
+	@media screen and (min-width:$containerWidthTablet){
+		font-size: 12px;
+	}
+
+	@media screen and (min-width:$containerWidthDesktop){
+		display: flex;
+		font-size: 14px;
+		line-height: 1.14;
+	}
 }
 
 .nav__item:not(:last-child) {
-	// margin-right: 50px;
-}
+	@media screen and (max-width:$containerWidthTablet - 1){
+		margin-bottom: 24px;
+	}
 
-.contacts{
-	align-items: center;
+	@media screen and (min-width:$containerWidthTablet){
+		margin-right: 50px;
+	}
 }
-
 .contacts__item:not(:last-child) {
-	// margin-right: 30px;
+	@media screen and (min-width:$containerWidthDesktop){
+		margin-right: 30px;
+	}
 }
 
 .contacts__icon-envelope{
@@ -106,7 +168,7 @@
 }
 
 .nav__link{
-	display: flex;
+	display: inline-flex;
    align-items: center;
 	text-decoration: none;
 	color: $titleTextColor;
@@ -120,28 +182,42 @@
 
 .contacts__link{
 	display: flex;
-   align-items: center;
+	align-items: center;
 	text-decoration: none;
 	color: $primaryTextColor;
 	fill: $primaryTextColor;
 	transition: color 250ms $mainBezier, fill 250ms $mainBezier;
-
+	
 	&:hover,
 	&:focus {
-	color: $accentColor;
-	fill: $accentColor;
+		color: $accentColor;
+		fill: $accentColor;
+	}
+	
+	@media screen and (min-width:$containerWidthTablet){
+		padding-top: 5px;
+		padding-bottom: 5px;
 	}
 }
 
 .nav__text,
 .contacts__text{
-	// padding-top: 32px;
-	// padding-bottom: 32px;
+	margin: 0;
+	@media screen and (max-width:$containerWidthTablet - 1){
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
 }
-
+.nav__text{
+		@media screen and (min-width:$containerWidthTablet){
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+}
 .nav__link--current{
 	color: $accentColor;
 	position: relative;
+
 	&::after {
 		content: '';
 		position: absolute;
@@ -150,5 +226,9 @@
 		align-self: flex-end;
 		border-radius: 2px;
 		background-color: $accentColor;
+		
+		@media screen and (min-width:$containerWidthTablet){
+			bottom: -1px;
+		}
 	}
 }

@@ -1,11 +1,15 @@
 .backdrop{
 	position: fixed;
+	z-index: 200;
+	display: flex;
 	background-color: $transparentBackdropColor;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
+	padding: 15px;
 	transition: opacity 250ms $mainBezier, transform 250ms $mainBezier;
+	overflow-y: scroll;
 }
 .backdrop--hiden{
 	transform: scale(0.5);
@@ -13,16 +17,19 @@
 	pointer-events: none;
 }
 .modal{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	min-width: 528px;
-	min-height: 81px;
+	position: relative;
 	padding: 40px;
+	margin: auto;
 	background-color: $primaryBgColor;
 	box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
 	border-radius: 4px;
+	width: 100%;
+	@media screen and (min-width:$containerWidthMobile){
+		max-width: 450px;
+	}
+	@media screen and (min-width:$containerWidthDesktop){
+		max-width: 528px;
+	}
 }
 .modal__close{
 	position: absolute;
