@@ -15,6 +15,7 @@
 	transform: scale(0.5);
 	opacity: 0;
 	pointer-events: none;
+	transition: opacity 250ms $mainBezier, transform 250ms $mainBezier
 }
 .modal{
 	position: relative;
@@ -24,6 +25,11 @@
 	box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
 	border-radius: 4px;
 	width: 100%;
+	opacity: 1;
+	transition: opacity 350ms $mainBezier 150ms;
+	.backdrop.backdrop--hiden &{
+		opacity: 0;
+	}
 	@media screen and (min-width:$containerWidthMobile){
 		max-width: 450px;
 	}

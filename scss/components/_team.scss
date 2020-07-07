@@ -2,8 +2,8 @@
 	background-color: $secondaryBgColor;
 }
 .team__container{
-	padding-top: 94px;
-	padding-bottom: 94px;
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 .team__title {
 	font-weight: 700;
@@ -11,7 +11,7 @@
 	line-height: 1.16;
 	text-align: center;
 	color: $titleTextColor;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 .team__list {
 	// display: flex;
@@ -19,11 +19,21 @@
 }
 .team-card {
 	background-color: $primaryBgColor;
-	width: calc((100% - 4 * 30px) / 4);
 	margin: 15px;
 	box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
 	border-radius: 0px 0px 4px 4px;
 	padding-bottom: 24px;
+
+	&:not(:last-child){
+	margin-bottom: 30px;
+	}
+	
+	@media screen and (min-width:$containerWidthTablet) {
+		width: calc((100% - 2 * 30px) / 2);
+	}
+	@media screen and (min-width:$containerWidthDesktop) {
+		width: calc((100% - 4 * 30px) / 4);
+	}
 }
 .team-card__image {
 	display: block;

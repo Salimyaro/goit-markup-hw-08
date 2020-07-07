@@ -9,16 +9,18 @@ body {
 	font-weight: 400;
 	letter-spacing: .03em;
 	margin: 0;
-	@media screen and (max-width:$containerWidthDesktop - 1) {
-		&.modal-open {
-			overflow: hidden;
-		}
-}
+	
+	&.modal-open {
+		overflow: hidden;
+	}
 }
 img {
 	display: block;
 	max-width: 100%;
 	height: auto;
+}
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;    
 }
 .container {
 	padding-left: 15px;

@@ -8,7 +8,16 @@
 		position: fixed;
 	}
 }
-
+.header-padding{
+	width: 100%;
+	height: 60px;
+	@media screen and (min-width:$containerWidthTablet) {
+		height: 81px;
+	}
+	@media screen and (min-width:$containerWidthDesktop) {
+		display: none;
+	}
+}
 .header__container{
 	display: flex;
 	align-items: center;
@@ -84,7 +93,7 @@
 	@media screen and (max-width:$containerWidthTablet - 1) {
 		background-color: $primaryBgColor;
 		padding: 40px;
-		pointer-events: all;
+		pointer-events: initial;
 		transform: translateY(-102%);
 		transition: transform 250ms $mainBezier;
 		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);

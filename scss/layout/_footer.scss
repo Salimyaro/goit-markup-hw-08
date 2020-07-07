@@ -17,11 +17,20 @@
 
 /* Adress ----------------------------------------------------------------------------------*/
 .address {
-	margin-right: 69px;
+	@media screen and (max-width:$containerWidthDesktop - 1) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 60px;
+	}
+		// margin-right: 69px;
 }
 .address__list {
 	line-height: 1.7;
 	font-style: normal;
+	@media screen and (max-width:$containerWidthDesktop - 1) {
+		text-align: center;
+	}
 }
 .address__item:not(:last-child){
 	margin-bottom: 9px;
@@ -43,10 +52,15 @@
 /* Social & Subscribe-----------------------------------------------------------------------*/
 .social{
 	margin-right: auto;
+
+	@media screen and (max-width:$containerWidthDesktop - 1) {
+		margin-bottom: 60px;
+	}
 }
 .social__title,
 .subscribe__title{
 	display: block;
+	text-align: center;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: $whiteTextColor;
@@ -54,16 +68,24 @@
 	margin-bottom: 20px;
 }
 .subscribe__form {
-	// display: flex;
+	display: flex;
 	justify-content: center;
 	align-items: center;
+	@media screen and (max-width:$containerWidthDesktop - 1) {
+		flex-direction: column;
+	}
 }
 .subscribe__field{
+	width: 100%;
 	position: relative;
-	margin-right: 12px;
+	margin-bottom: 20px;
+	@media screen and (min-width:$containerWidthDesktop) {
+		margin-right: 12px;
+		margin-bottom: 0px;
+	}
 }
 .subscribe__input {
-	max-width: 358px;
+	width: 100%;
 	height: 50px;
 	padding-left: 12px;
 	border: 1px solid rgba(255, 255, 255, 0.3);
@@ -73,6 +95,9 @@
 	line-height: 1.25px;
 	letter-spacing: 0.03em;
 	color: $footerFormText;
+	@media screen and (min-width:$containerWidthDesktop) {
+		max-width: 358px;
+	}
 }
 .subscribe__label {
 	position: absolute;
@@ -83,11 +108,18 @@
 	line-height: 1.25px;
 	letter-spacing: 0.03em;
 	color: $footerFormText;
-	transition: transform 250ms $mainBezier;
+	transition: transform 250ms $mainBezier, font-size 250ms $mainBezier;
 
 	.subscribe__input:not(:placeholder-shown) + &,
 	.subscribe__field:focus-within & {
-		transform: translateX(-75px);
+		transform: translate3d(-16px, -36px, 0);
+		font-size: 12px;
+		@media screen and (min-width:375px) {
+			transform: translate3d(-4px, -38px, 0);
+		}
+		@media screen and (min-width:580px) {
+			transform: translate3d(-64px, 0px, 0);
+		}
 	}
 
 	&::after{
@@ -103,7 +135,10 @@
 }
 
 .subscribe__button {
-	display: inline-flex;
+	display: flex;
+	@media screen and (min-width:$containerWidthDesktop) {
+		display: inline-flex;
+	}
    justify-content: center;
    align-items: center;
 }
