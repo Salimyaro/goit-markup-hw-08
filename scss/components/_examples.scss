@@ -1,6 +1,9 @@
 .examples {
 	display: none;
 	background-color: $primaryBgColor;
+	@media screen and (min-width:$containerWidthDesktop){
+		display: block;
+	}
 }
 .examples__container{
 	padding-bottom: 94px;
@@ -16,7 +19,7 @@
 	margin-bottom: 50px;
 }
 .examples__list {
-	// display: flex;
+	display: flex;
 	margin: -15px;
 }
 .example-card {

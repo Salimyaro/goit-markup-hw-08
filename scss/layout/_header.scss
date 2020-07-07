@@ -7,22 +7,12 @@
 	@media screen and (max-width:$containerWidthDesktop - 1){
 		position: fixed;
 	}
-}
-.header-padding{
-	width: 100%;
-	height: 60px;
-	@media screen and (min-width:$containerWidthTablet) {
-		height: 81px;
-	}
-	@media screen and (min-width:$containerWidthDesktop) {
-		display: none;
-	}
+	
 }
 .header__container{
 	display: flex;
 	align-items: center;
 }
-
 .header__logo{
 	padding-top: 16px;
 	padding-bottom: 16px;
@@ -44,6 +34,7 @@
 	border: none;
 	fill: $titleTextColor;
 	transition: fill 250ms $mainBezier;
+	cursor: pointer;
 
 	&:hover,
 	&:focus {
@@ -54,27 +45,22 @@
 		display: none;
 	}
 }
-
 .header__burger-icon {
 	display: block;
 }
-
 .header__open-icon {
 	.header__button.is-open & {
 		display: none;
 	}
 }
-
 .header__close-icon {
 	display: none;
 	.header__button.is-open & {
 		display: block;
 	}
 }
-
 .header__content-thumb{
 	width: 100%;
-
 	@media screen and (max-width:$containerWidthTablet - 1) {
 		overflow: hidden;
 		position: absolute;
@@ -86,10 +72,6 @@
 }
 
 .header__content{
-	@media screen and(max-height:$containerWidthMobile) {
-		padding: 0;
-	}
-
 	@media screen and (max-width:$containerWidthTablet - 1) {
 		background-color: $primaryBgColor;
 		padding: 40px;
@@ -108,8 +90,10 @@
 		align-items: center;
 		justify-content: space-between;
 	}
+		@media screen and(max-height:368px) {
+		padding: 0;
+	}
 }
-
 .nav__list,
 .contacts {
 	font-weight: 500;
@@ -123,7 +107,6 @@
 		align-items: center;
 	}
 }
-
 .nav__list{
 	@media screen and (max-width:$containerWidthTablet - 1){
 		margin-bottom: 20px;
@@ -136,7 +119,6 @@
 		line-height: 1.15;
 	}
 }
-
 .contacts{
 	@media screen and (min-width:$containerWidthTablet){
 		font-size: 12px;
@@ -148,7 +130,6 @@
 		line-height: 1.14;
 	}
 }
-
 .nav__item:not(:last-child) {
 	@media screen and (max-width:$containerWidthTablet - 1){
 		margin-bottom: 24px;
@@ -163,19 +144,16 @@
 		margin-right: 30px;
 	}
 }
-
 .contacts__icon-envelope{
 	width: 16px;
 	height: 12px;
 	margin-right: 10px;
 }
-
 .contacts__icon-smartphone{
 	width: 10px;
 	height: 15px;
 	margin-right: 10px;
 }
-
 .nav__link{
 	display: inline-flex;
    align-items: center;
@@ -188,7 +166,6 @@
 	color: $accentColor;
 	}
 }
-
 .contacts__link{
 	display: flex;
 	align-items: center;
@@ -208,7 +185,6 @@
 		padding-bottom: 5px;
 	}
 }
-
 .nav__text,
 .contacts__text{
 	margin: 0;

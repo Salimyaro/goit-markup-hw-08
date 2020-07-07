@@ -1,16 +1,81 @@
 .hero-section{
+	&::before {
+		content:'';
+		display: block;
+		width: 100%;
+		height: 60px;
+		@media screen and (min-width:$containerWidthTablet) {
+			height: 81px;
+		}
+		@media screen and (min-width:$containerWidthDesktop) {
+			display: none;
+		}
+	}
+}
+.hero-section__background{
 	max-width: 1600px;
 	height: 400px;
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
+	background-position: center;
+	background-size: cover;
+	
 	background-image: 
+	linear-gradient(90deg, 
+	$transparentBgColor 0%, 
+	$transparentBgColor 100%),
+	url('../images/hero/hero-mobile.jpg');
+
+	@media screen and (min-device-pixel-ratio: 2),
+	screen and (min-resolution: 192dpi),
+	screen and (min-resolution: 2dppx) {
+		background-image: 
 		linear-gradient(90deg, 
 		$transparentBgColor 0%, 
 		$transparentBgColor 100%),
-		url('../images/hero.jpg');
-	background-position: center;
-   background-size: cover;
+		url('../images/hero/hero-mobile@2x.jpg');
+	}
+
+	@media screen and (min-width:$containerWidthMobile + 1) {
+		background-image: 
+		linear-gradient(90deg, 
+		$transparentBgColor 0%, 
+		$transparentBgColor 100%),
+		url('../images/hero/hero-tablet.jpg');
+	
+		@media screen and (min-device-pixel-ratio: 2),
+		screen and (min-resolution: 192dpi),
+		screen and (min-resolution: 2dppx) {
+			background-image: 
+			linear-gradient(90deg, 
+			$transparentBgColor 0%, 
+			$transparentBgColor 100%),
+			url('../images/hero/hero-tablet@2x.jpg');
+		}
+	}
+
+	@media screen and (min-width:$containerWidthTablet + 1) {
+		background-image: 
+		linear-gradient(90deg, 
+		$transparentBgColor 0%, 
+		$transparentBgColor 100%),
+		url('../images/hero/hero-desktop.jpg');
+		
+		@media screen and (min-device-pixel-ratio: 2),
+		screen and (min-resolution: 192dpi),
+		screen and (min-resolution: 2dppx) {
+			background-image: 
+			linear-gradient(90deg, 
+			$transparentBgColor 0%, 
+			$transparentBgColor 100%),
+			url('../images/hero/hero-desktop@2x.jpg');
+		}
+	}
+
+	@media screen and (min-width:$containerWidthDesktop) {
+		height: 600px;
+	}
 }
 .hero-section__container{
 	display: flex;
@@ -20,7 +85,7 @@
 	padding-bottom: 15px;
 }
 .hero-section__title {
-	max-width: 700px;
+	max-width: 360px;
 	font-weight: 900;
 	font-size: 26px;
 	line-height: 1.62;
@@ -29,4 +94,10 @@
 	text-transform: uppercase;
 	color: $whiteTextColor;
 	margin-bottom: 30px;
+
+	@media screen and (min-width:$containerWidthDesktop){
+		max-width: 700px;
+	font-size: 44px;
+	line-height: 1.36;
+	}
 }

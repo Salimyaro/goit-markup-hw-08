@@ -4,6 +4,10 @@
 .clients__container{
 	padding-top: 60px;
 	padding-bottom: 60px;
+	@media screen and (min-width:$containerWidthDesktop){
+		padding-top: 94px;
+		padding-bottom: 94px;
+	}
 }
 .clients__title {
 	font-weight: 700;
@@ -17,10 +21,16 @@
 	display: flex;
 	flex-wrap: wrap;
 	margin: -15px;
+	@media screen and (min-width:$containerWidthDesktop){
+		flex-wrap: nowrap;
+	}
 }
 .clients__item {
 	margin: 15px;
 	flex-basis: calc((100% - 2 * 30px) / 2);
+	@media screen and (min-width:$containerWidthTablet) {
+		flex-basis: calc((100% - 3 * 30px) / 3);
+	}
 }
 .clients__icon{
 	&--ya-co{

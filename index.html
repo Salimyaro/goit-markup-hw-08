@@ -72,12 +72,12 @@
 		</div>
 	</header>
 	<main>
-		<div class="header-padding"></div>
-		<!-- Секция Героя -->
 		<section class="hero-section">
-			<div class="container  hero-section__container">
-				<h1 class="hero-section__title">Эффективные решения для вашего бизнеса</h1>
-				<button data-modal-open type="button" class="button interactive">Заказать услугу</button>
+			<div class="hero-section__background">
+				<div class="container  hero-section__container">
+					<h1 class="hero-section__title">Эффективные решения для вашего бизнеса</h1>
+					<button data-modal-open type="button" class="button interactive">Заказать услугу</button>
+				</div>
 			</div>
 		</section>
 		<!-- Преимущества -->
@@ -130,15 +130,28 @@
 				<h2 class="examples__title">Чем мы занимаемся</h2>
 				<ul class="list examples__list">
 					<li class="example-card">
-						<img class="example-card__image" src="./images/examples/desctop.jpg" alt="Десктопные приложения" width="370">
+						<picture>
+							<source srcset="./images/examples/desktop-370.webp 1x, ./images/examples/desktop@2x-740.webp 2x," type="image/webp">
+							<source srcset="./images/examples/desktop-370.jpg 1x, ./images/examples/desktop@2x-740.jpg 2x," type="image/jpg">
+							<img class="example-card__image" src="./images/examples/desktop-370.jpg" alt="Десктопные приложения" width="370"
+								height="294">
+						</picture>
 						<h3 class="example-card__title">Десктопные приложения</h3>
 					</li>
 					<li class="example-card">
-						<img class="example-card__image" src="./images/examples/mobile.jpg" alt="Мобильные приложения" width="370">
+						<picture>
+							<source srcset="./images/examples/mobile-370.webp 1x, ./images/examples/mobile@2x-740.webp 2x," type="image/webp">
+							<source srcset="./images/examples/mobile-370.jpg 1x, ./images/examples/mobile@2x-740.jpg 2x," type="image/jpg">
+							<img class="example-card__image" src="./images/examples/mobile-370.jpg" alt="Мобильные приложения" width="370" height="294">
+						</picture>
 						<h3 class="example-card__title">Мобильные приложения</h3>
 					</li>
 					<li class="example-card">
-						<img class="example-card__image" src="./images/examples/design.jpg" alt="Дизайнерские решения" width="370">
+						<picture>
+							<source srcset="./images/examples/design-370.webp 1x, ./images/examples/design@2x-740.webp 2x," type="image/webp">
+							<source srcset="./images/examples/design-370.jpg 1x, ./images/examples/design@2x-740.jpg 2x," type="image/jpg">
+							<img class="example-card__image" src="./images/examples/design-370.jpg" alt="Десктопные приложения" width="370" height="294">
+						</picture>
 						<h3 class="example-card__title">Дизайнерские решения</h3>
 					</li>
 				</ul>
@@ -150,7 +163,21 @@
 				<h2 class="team__title">Наша команда</h2>
 				<ul class="list team__list">
 						<li class="team-card">
-							<img class="team-card__image" src="./images/team/kucherenko.jpg" alt="Николай Кучеренко" width="270">
+							<picture>
+								<source srcset="./images/team/kucherenko-mobile-450.webp 1x, ./images/team/kucherenko-mobile@2x-900.webp 2x,"
+									type="image/webp" media="(max-width: 767px)">
+								<source srcset="./images/team/kucherenko-mobile-450.jpg 1x, ./images/team/kucherenko-mobile@2x-900.jpg 2x,"
+									type="image/jpg" media="(max-width: 767px)">
+								<source srcset="./images/team/kucherenko-desktop-270.webp 1x, ./images/team/kucherenko-desktop@2x-540.webp 2x,"
+									type="image/webp" media="(min-width: 1200px)">
+								<source srcset="./images/team/kucherenko-desktop-270.jpg 1x, ./images/team/kucherenko-desktop@2x-540.jpg 2x,"
+									type="image/jpg" media="(min-width: 1200px)">
+								<source srcset="./images/team/kucherenko-tablet-354.webp 1x, ./images/team/kucherenko-tablet@2x-708.webp 2x,"
+									type="image/webp" media="(min-width: 768px)">
+								<source srcset="./images/team/kucherenko-tablet-354.jpg 1x, ./images/team/kucherenko-tablet@2x-708.jpg 2x,"
+									type="image/jpg" media="(min-width: 768px)">
+								<img class="team-card__image" src="./images/team/kucherenko-mobile.jpg" alt="Николай Кучеренко" width="450">
+							</picture>
 							<h3 class="team-card__title">Николай Кучеренко</h3>
 							<p class="team-card__text">Product Designer</p>
 							<ul class="list social__list">
@@ -185,7 +212,21 @@
 							</ul>
 						</li>
 						<li class="team-card">
-							<img class="team-card__image" src="./images/team/ivanova.jpg" alt="Ольга Иванова" width="270">
+							<picture>
+								<source srcset="./images/team/ivanova-mobile-450.webp 1x, ./images/team/ivanova-mobile@2x-900.webp 2x,"
+									type="image/webp" media="(max-width: 767px)">
+								<source srcset="./images/team/ivanova-mobile-450.jpg 1x, ./images/team/ivanova-mobile@2x-900.jpg 2x,"
+									type="image/jpg" media="(max-width: 767px)">
+								<source srcset="./images/team/ivanova-desktop-270.webp 1x, ./images/team/ivanova-desktop@2x-540.webp 2x,"
+									type="image/webp" media="(min-width: 1200px)">
+								<source srcset="./images/team/ivanova-desktop-270.jpg 1x, ./images/team/ivanova-desktop@2x-540.jpg 2x,"
+									type="image/jpg" media="(min-width: 1200px)">
+								<source srcset="./images/team/ivanova-tablet-354.webp 1x, ./images/team/ivanova-tablet@2x-708.webp 2x,"
+									type="image/webp" media="(min-width: 768px)">
+								<source srcset="./images/team/ivanova-tablet-354.jpg 1x, ./images/team/ivanova-tablet@2x-708.jpg 2x,"
+									type="image/jpg" media="(min-width: 768px)">
+							<img class="team-card__image" src="./images/team/ivanova-mobile.jpg" alt="Ольга Иванова" width="450">
+							</picture>
 							<h3 class="team-card__title">Ольга Иванова</h3>
 							<p class="team-card__text">Frontend Developer</p>
 							<ul class="list social__list">
@@ -220,7 +261,21 @@
 							</ul>
 						</li>
 						<li class="team-card">
-							<img class="team-card__image" src="./images/team/shevchenko.jpg" alt="Андрей Шевченко" width="270">
+							<picture>
+								<source srcset="./images/team/shevchenko-mobile-450.webp 1x, ./images/team/shevchenko-mobile@2x-900.webp 2x,"
+									type="image/webp" media="(max-width: 767px)">
+								<source srcset="./images/team/shevchenko-mobile-450.jpg 1x, ./images/team/shevchenko-mobile@2x-900.jpg 2x,"
+									type="image/jpg" media="(max-width: 767px)">
+								<source srcset="./images/team/shevchenko-desktop-270.webp 1x, ./images/team/shevchenko-desktop@2x-540.webp 2x,"
+									type="image/webp" media="(min-width: 1200px)">
+								<source srcset="./images/team/shevchenko-desktop-270.jpg 1x, ./images/team/shevchenko-desktop@2x-540.jpg 2x,"
+									type="image/jpg" media="(min-width: 1200px)">
+								<source srcset="./images/team/shevchenko-tablet-354.webp 1x, ./images/team/shevchenko-tablet@2x-708.webp 2x,"
+									type="image/webp" media="(min-width: 768px)">
+								<source srcset="./images/team/shevchenko-tablet-354.jpg 1x, ./images/team/shevchenko-tablet@2x-708.jpg 2x,"
+									type="image/jpg" media="(min-width: 768px)">
+							<img class="team-card__image" src="./images/team/shevchenko-mobile.jpg" alt="Андрей Шевченко" width="450">
+							</picture>
 							<h3 class="team-card__title">Андрей Шевченко</h3>
 							<p class="team-card__text">Marketing</p>
 							<ul class="list social__list">
@@ -255,7 +310,21 @@
 							</ul>
 						</li>
 						<li class="team-card">
-							<img class="team-card__image" src="./images/team/nikolaev.jpg" alt="Иван Николаев" width="270">
+							<picture>
+								<source srcset="./images/team/nikolaev-mobile-450.webp 1x, ./images/team/nikolaev-mobile@2x-900.webp 2x,"
+									type="image/webp" media="(max-width: 767px)">
+								<source srcset="./images/team/nikolaev-mobile-450.jpg 1x, ./images/team/nikolaev-mobile@2x-900.jpg 2x,"
+									type="image/jpg" media="(max-width: 767px)">
+								<source srcset="./images/team/nikolaev-desktop-270.webp 1x, ./images/team/nikolaev-desktop@2x-540.webp 2x,"
+									type="image/webp" media="(min-width: 1200px)">
+								<source srcset="./images/team/nikolaev-desktop-270.jpg 1x, ./images/team/nikolaev-desktop@2x-540.jpg 2x,"
+									type="image/jpg" media="(min-width: 1200px)">
+								<source srcset="./images/team/nikolaev-tablet-354.webp 1x, ./images/team/nikolaev-tablet@2x-708.webp 2x,"
+									type="image/webp" media="(min-width: 768px)">
+								<source srcset="./images/team/nikolaev-tablet-354.jpg 1x, ./images/team/nikolaev-tablet@2x-708.jpg 2x,"
+									type="image/jpg" media="(min-width: 768px)">
+							<img class="team-card__image" src="./images/team/nikolaev-mobile.jpg" alt="Иван Николаев" width="450">
+							</picture>
 							<h3 class="team-card__title">Иван Николаев</h3>
 							<p class="team-card__text">UI Designer</p>
 							<ul class="list social__list">
@@ -345,46 +414,48 @@
 	</main>
 	<footer class="footer">
 		<div class="container footer__container">
-			<address class="address">
-				<a class="logo footer__logo interactive" href="./index.html"><span class="logo__span">Web</span> Studio</a>
-				<ul class="list address__list">
-					<li class="address__item"><a href="https://goo.gl/maps/18ePBLMVioGsdmMz9" target="_blank" class="address__street interactive"><p>г. Киев, пр-т Леси Украинки, 26</p></a></li>
-					<li class="address__item"><a href="mailto:info@devstudio.com" class="address__mail interactive"><p>info@devstudio.com</p></a></li>
-					<li class="address__item"><a href="tel:+380991111111" class="address__tel interactive"><p>+38 099 111 11 11</p></a></li>
-				</ul>
-			</address>
-			<div class="social">
-				<b class="social__title">присоединяйтесь</b>
-				<ul class="list social__list">
-					<li class="social__item">
-						<a class="social__link footer__link interactive" aria-label="ссылка на инстаграмм" href="">
-							<svg class="social__icon">
-								<use href="./images/icon/sprite.svg#icon-instagram"></use>
-							</svg>
-						</a>
-					</li>
-					<li class="social__item">
-						<a class="social__link footer__link interactive" aria-label="ссылка на твиттер" href="">
-							<svg class="social__icon">
-								<use href="./images/icon/sprite.svg#icon-twitter"></use>
-							</svg>
-						</a>
-					</li>
-					<li class="social__item">
-						<a class="social__link footer__link interactive" aria-label="ссылка на фейсбук" href="">
-							<svg class="social__icon">
-								<use href="./images/icon/sprite.svg#icon-facebook"></use>
-							</svg>
-						</a>
-					</li>
-					<li class="social__item">
-						<a class="social__link footer__link interactive" aria-label="ссылка на линкед ин" href="">
-							<svg class="social__icon">
-								<use href="./images/icon/sprite.svg#icon-linkedin"></use>
-							</svg>
-						</a>
-					</li>
-				</ul>
+			<div class="footer__half-thumb">
+				<address class="address">
+					<a class="logo footer__logo interactive" href="./index.html"><span class="logo__span">Web</span> Studio</a>
+					<ul class="list address__list">
+						<li class="address__item"><a href="https://goo.gl/maps/18ePBLMVioGsdmMz9" target="_blank" class="address__street interactive"><p>г. Киев, пр-т Леси Украинки, 26</p></a></li>
+						<li class="address__item"><a href="mailto:info@devstudio.com" class="address__mail interactive"><p>info@devstudio.com</p></a></li>
+						<li class="address__item"><a href="tel:+380991111111" class="address__tel interactive"><p>+38 099 111 11 11</p></a></li>
+					</ul>
+				</address>
+				<div class="social">
+					<b class="social__title">присоединяйтесь</b>
+					<ul class="list social__list">
+						<li class="social__item">
+							<a class="social__link footer__link interactive" aria-label="ссылка на инстаграмм" href="">
+								<svg class="social__icon">
+									<use href="./images/icon/sprite.svg#icon-instagram"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="social__item">
+							<a class="social__link footer__link interactive" aria-label="ссылка на твиттер" href="">
+								<svg class="social__icon">
+									<use href="./images/icon/sprite.svg#icon-twitter"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="social__item">
+							<a class="social__link footer__link interactive" aria-label="ссылка на фейсбук" href="">
+								<svg class="social__icon">
+									<use href="./images/icon/sprite.svg#icon-facebook"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="social__item">
+							<a class="social__link footer__link interactive" aria-label="ссылка на линкед ин" href="">
+								<svg class="social__icon">
+									<use href="./images/icon/sprite.svg#icon-linkedin"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div class="subscribe">
 				<b class="subscribe__title">Подпишитесь на рассылку</b>
@@ -405,7 +476,7 @@
 	</footer>
 	<div class="backdrop backdrop--hiden" data-modal>
 		<div class="modal">
-			<button class="modal__close interactive" data-modal-close>
+			<button class="modal__button interactive" data-modal-close>
 				<svg class="modal__close-icon">
 					<use href="./images/icon/sprite.svg#icon-close"></use>
 				</svg>

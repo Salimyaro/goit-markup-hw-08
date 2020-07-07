@@ -18,6 +18,7 @@
 	background-color: transparent;
 	fill: $socialSvgColor;
 	transition: background-color 250ms $mainBezier, fill 250ms $mainBezier;
+
 	&:hover,
 	&:focus {
 		background-color: $accentColor;

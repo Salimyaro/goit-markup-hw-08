@@ -88,6 +88,7 @@
 	padding-left: 22px;
 	font-size: 14px;
 	line-height: 1.71;
+
 	@media screen and (max-width:$containerWidthDesktop - 1) {
 		font-size: 12px;
 		line-height: 1.17;
@@ -107,7 +108,7 @@
 		border-radius: 2px;
 		transition: border-color 250ms $mainBezier, background-color 250ms $mainBezier;
 	}
-	
+
 	.form__input--terms:checked + &::before {
 		background-color: $accentColor;
 		background-image: url(../images/icon/check.svg);

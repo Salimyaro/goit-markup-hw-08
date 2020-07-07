@@ -4,18 +4,29 @@
 .team__container{
 	padding-top: 60px;
 	padding-bottom: 60px;
+		@media screen and (min-width:$containerWidthDesktop){
+		padding-top: 94px;
+		padding-bottom: 94px;
+	}
 }
 .team__title {
 	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.16;
+	font-size: 28px;
+	line-height: 1.18;
 	text-align: center;
 	color: $titleTextColor;
 	margin-bottom: 30px;
+	@media screen and (min-width:$containerWidthDesktop){
+		font-size: 36px;
+		line-height: 1.16;
+	}
 }
 .team__list {
-	// display: flex;
 	margin: -15px;
+	@media screen and (min-width:$containerWidthTablet){
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
 .team-card {
 	background-color: $primaryBgColor;
@@ -24,10 +35,11 @@
 	border-radius: 0px 0px 4px 4px;
 	padding-bottom: 24px;
 
-	&:not(:last-child){
-	margin-bottom: 30px;
+	@media screen and (max-width:$containerWidthTablet - 1){
+		&:not(:last-child){
+			margin-bottom: 30px;
+		}
 	}
-	
 	@media screen and (min-width:$containerWidthTablet) {
 		width: calc((100% - 2 * 30px) / 2);
 	}

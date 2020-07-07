@@ -9,7 +9,7 @@
 	bottom: 0;
 	padding: 15px;
 	transition: opacity 250ms $mainBezier, transform 250ms $mainBezier;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 .backdrop--hiden{
 	transform: scale(0.5);
@@ -27,9 +27,11 @@
 	width: 100%;
 	opacity: 1;
 	transition: opacity 350ms $mainBezier 150ms;
+
 	.backdrop.backdrop--hiden &{
 		opacity: 0;
 	}
+
 	@media screen and (min-width:$containerWidthMobile){
 		max-width: 450px;
 	}
@@ -37,7 +39,7 @@
 		max-width: 528px;
 	}
 }
-.modal__close{
+.modal__button{
 	position: absolute;
 	display: flex;
    align-items: center;
@@ -49,13 +51,15 @@
 	border-radius: 50%;
 	background: $primaryBgColor;
 	border: 1px solid rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	fill: #000;
+	transition: fill 250ms $mainBezier;
+	
+	&:hover {
+		fill: $accentColor;
+	}
 }
 .modal__close-icon{
 	width: 18px;
 	height: 18px;
-	fill: #000;
-	transition: fill 250ms $mainBezier;
-	.modal__close:hover & {
-		fill: $accentColor;
-	}
 }
