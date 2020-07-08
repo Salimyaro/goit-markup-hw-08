@@ -12,9 +12,7 @@ body {
 	font-weight: 400;
 	letter-spacing: .03em;
 	margin: 0;
-	@media screen and (min-width:$containerWidthDesktop) {
-		overflow-y: overlay;
-	}
+	
 	&.modal-open {
 		overflow: hidden;
 	}
