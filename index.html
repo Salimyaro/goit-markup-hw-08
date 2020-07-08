@@ -131,26 +131,43 @@
 				<ul class="list examples__list">
 					<li class="example-card">
 						<picture>
-							<source srcset="./images/examples/desktop-370.webp 1x, ./images/examples/desktop@2x-740.webp 2x," type="image/webp">
-							<source srcset="./images/examples/desktop-370.jpg 1x, ./images/examples/desktop@2x-740.jpg 2x," type="image/jpg">
-							<img class="example-card__image" src="./images/examples/desktop-370.jpg" alt="Десктопные приложения" width="370"
-								height="294">
+							<source 
+							srcset="./images/examples/desktop-370.webp 370w, ./images/examples/desktop@2x-740.webp 740w" 
+							type="image/webp"
+							sizes="370px"
+							>
+
+							<img class="example-card__image" 
+							srcset="./images/examples/desktop-370.jpg 370w, ./images/examples/desktop@2x-740.jpg 740w" 
+							src="./images/examples/desktop-370.jpg" 
+							alt="Десктопные приложения" 
+							loading="lazy"
+							sizes="370px">
 						</picture>
+
 						<h3 class="example-card__title">Десктопные приложения</h3>
 					</li>
 					<li class="example-card">
 						<picture>
-							<source srcset="./images/examples/mobile-370.webp 1x, ./images/examples/mobile@2x-740.webp 2x," type="image/webp">
-							<source srcset="./images/examples/mobile-370.jpg 1x, ./images/examples/mobile@2x-740.jpg 2x," type="image/jpg">
-							<img class="example-card__image" src="./images/examples/mobile-370.jpg" alt="Мобильные приложения" width="370" height="294">
+							<source srcset="./images/examples/mobile-370.webp 370w, ./images/examples/mobile@2x-740.webp 740w" type="image/webp" sizes="370px">
+							<img class="example-card__image" 
+							srcset="./images/examples/mobile-370.jpg 370w, ./images/examples/mobile@2x-740.jpg 740w"
+							src="./images/examples/mobile-370.jpg" 
+							alt="Мобильные приложения" 
+							loading="lazy"
+							sizes="370px">
 						</picture>
 						<h3 class="example-card__title">Мобильные приложения</h3>
 					</li>
 					<li class="example-card">
 						<picture>
-							<source srcset="./images/examples/design-370.webp 1x, ./images/examples/design@2x-740.webp 2x," type="image/webp">
-							<source srcset="./images/examples/design-370.jpg 1x, ./images/examples/design@2x-740.jpg 2x," type="image/jpg">
-							<img class="example-card__image" src="./images/examples/design-370.jpg" alt="Десктопные приложения" width="370" height="294">
+							<source srcset="./images/examples/design-370.webp 370w, ./images/examples/design@2x-740.webp 740w" type="image/webp" sizes="370px">
+							<img class="example-card__image" 
+							srcset="./images/examples/design-370.jpg 370w, ./images/examples/design@2x-740.jpg 740w"
+							src="./images/examples/design-370.jpg" 
+							alt="Дизайнерские решения" 
+							loading="lazy"
+							sizes="370px">
 						</picture>
 						<h3 class="example-card__title">Дизайнерские решения</h3>
 					</li>
@@ -164,19 +181,31 @@
 				<ul class="list team__list">
 						<li class="team-card">
 							<picture>
-								<source srcset="./images/team/kucherenko-mobile-450.webp 1x, ./images/team/kucherenko-mobile@2x-900.webp 2x,"
-									type="image/webp" media="(max-width: 767px)">
-								<source srcset="./images/team/kucherenko-mobile-450.jpg 1x, ./images/team/kucherenko-mobile@2x-900.jpg 2x,"
-									type="image/jpg" media="(max-width: 767px)">
-								<source srcset="./images/team/kucherenko-desktop-270.webp 1x, ./images/team/kucherenko-desktop@2x-540.webp 2x,"
-									type="image/webp" media="(min-width: 1200px)">
-								<source srcset="./images/team/kucherenko-desktop-270.jpg 1x, ./images/team/kucherenko-desktop@2x-540.jpg 2x,"
-									type="image/jpg" media="(min-width: 1200px)">
-								<source srcset="./images/team/kucherenko-tablet-354.webp 1x, ./images/team/kucherenko-tablet@2x-708.webp 2x,"
-									type="image/webp" media="(min-width: 768px)">
-								<source srcset="./images/team/kucherenko-tablet-354.jpg 1x, ./images/team/kucherenko-tablet@2x-708.jpg 2x,"
-									type="image/jpg" media="(min-width: 768px)">
-								<img class="team-card__image" src="./images/team/kucherenko-mobile.jpg" alt="Николай Кучеренко" width="450">
+								<source srcset="./images/team/kucherenko-mobile-450.webp 450w, ./images/team/kucherenko-mobile@2x-900.webp 900w"
+									type="image/webp" 
+									sizes="450px" 
+									media="(max-width: 767px)">
+								<source srcset="./images/team/kucherenko-mobile-450.jpg 450w, ./images/team/kucherenko-mobile@2x-900.jpg 900w"
+									type="image/jpg" 
+									sizes="450px" 
+									media="(max-width: 767px)">
+								<source srcset="./images/team/kucherenko-desktop-270.webp 270w, ./images/team/kucherenko-desktop@2x-540.webp 540w"
+									type="image/webp" 
+									sizes="270px" 
+									media="(min-width: 1200px)">
+								<source srcset="./images/team/kucherenko-desktop-270.jpg 270w, ./images/team/kucherenko-desktop@2x-540.jpg 540w"
+									type="image/jpg" 
+									sizes="270px" 
+									media="(min-width: 1200px)">
+								<source srcset="./images/team/kucherenko-tablet-354.webp 354w, ./images/team/kucherenko-tablet@2x-708.webp 708w"
+									type="image/webp" 
+									sizes="354px" 
+									media="(min-width: 768px)">
+								<source srcset="./images/team/kucherenko-tablet-354.jpg 354w, ./images/team/kucherenko-tablet@2x-708.jpg 708w"
+									type="image/jpg" 
+									sizes="354px" 
+									media="(min-width: 768px)">
+								<img class="team-card__image" src="./images/team/kucherenko-mobile.jpg" alt="Николай Кучеренко">
 							</picture>
 							<h3 class="team-card__title">Николай Кучеренко</h3>
 							<p class="team-card__text">Product Designer</p>
@@ -213,19 +242,19 @@
 						</li>
 						<li class="team-card">
 							<picture>
-								<source srcset="./images/team/ivanova-mobile-450.webp 1x, ./images/team/ivanova-mobile@2x-900.webp 2x,"
-									type="image/webp" media="(max-width: 767px)">
-								<source srcset="./images/team/ivanova-mobile-450.jpg 1x, ./images/team/ivanova-mobile@2x-900.jpg 2x,"
-									type="image/jpg" media="(max-width: 767px)">
-								<source srcset="./images/team/ivanova-desktop-270.webp 1x, ./images/team/ivanova-desktop@2x-540.webp 2x,"
-									type="image/webp" media="(min-width: 1200px)">
-								<source srcset="./images/team/ivanova-desktop-270.jpg 1x, ./images/team/ivanova-desktop@2x-540.jpg 2x,"
-									type="image/jpg" media="(min-width: 1200px)">
-								<source srcset="./images/team/ivanova-tablet-354.webp 1x, ./images/team/ivanova-tablet@2x-708.webp 2x,"
-									type="image/webp" media="(min-width: 768px)">
-								<source srcset="./images/team/ivanova-tablet-354.jpg 1x, ./images/team/ivanova-tablet@2x-708.jpg 2x,"
-									type="image/jpg" media="(min-width: 768px)">
-							<img class="team-card__image" src="./images/team/ivanova-mobile.jpg" alt="Ольга Иванова" width="450">
+								<source srcset="./images/team/ivanova-mobile-450.webp 450w, ./images/team/ivanova-mobile@2x-900.webp 900w"
+									type="image/webp" sizes="450px" media="(max-width: 767px)">
+								<source srcset="./images/team/ivanova-mobile-450.jpg 450w, ./images/team/ivanova-mobile@2x-900.jpg 900w"
+									type="image/jpg" sizes="450px" media="(max-width: 767px)">
+								<source srcset="./images/team/ivanova-desktop-270.webp 270w, ./images/team/ivanova-desktop@2x-540.webp 540w"
+									type="image/webp" sizes="270px" media="(min-width: 1200px)">
+								<source srcset="./images/team/ivanova-desktop-270.jpg 270w, ./images/team/ivanova-desktop@2x-540.jpg 540w"
+									type="image/jpg" sizes="270px" media="(min-width: 1200px)">
+								<source srcset="./images/team/ivanova-tablet-354.webp 354w, ./images/team/ivanova-tablet@2x-708.webp 708w"
+									type="image/webp" sizes="354px" media="(min-width: 768px)">
+								<source srcset="./images/team/ivanova-tablet-354.jpg 354w, ./images/team/ivanova-tablet@2x-708.jpg 708w"
+									type="image/jpg" sizes="354px" media="(min-width: 768px)">
+							<img class="team-card__image" src="./images/team/ivanova-mobile.jpg" alt="Ольга Иванова">
 							</picture>
 							<h3 class="team-card__title">Ольга Иванова</h3>
 							<p class="team-card__text">Frontend Developer</p>
@@ -262,19 +291,19 @@
 						</li>
 						<li class="team-card">
 							<picture>
-								<source srcset="./images/team/shevchenko-mobile-450.webp 1x, ./images/team/shevchenko-mobile@2x-900.webp 2x,"
-									type="image/webp" media="(max-width: 767px)">
-								<source srcset="./images/team/shevchenko-mobile-450.jpg 1x, ./images/team/shevchenko-mobile@2x-900.jpg 2x,"
-									type="image/jpg" media="(max-width: 767px)">
-								<source srcset="./images/team/shevchenko-desktop-270.webp 1x, ./images/team/shevchenko-desktop@2x-540.webp 2x,"
-									type="image/webp" media="(min-width: 1200px)">
-								<source srcset="./images/team/shevchenko-desktop-270.jpg 1x, ./images/team/shevchenko-desktop@2x-540.jpg 2x,"
-									type="image/jpg" media="(min-width: 1200px)">
-								<source srcset="./images/team/shevchenko-tablet-354.webp 1x, ./images/team/shevchenko-tablet@2x-708.webp 2x,"
-									type="image/webp" media="(min-width: 768px)">
-								<source srcset="./images/team/shevchenko-tablet-354.jpg 1x, ./images/team/shevchenko-tablet@2x-708.jpg 2x,"
-									type="image/jpg" media="(min-width: 768px)">
-							<img class="team-card__image" src="./images/team/shevchenko-mobile.jpg" alt="Андрей Шевченко" width="450">
+								<source srcset="./images/team/shevchenko-mobile-450.webp 450w, ./images/team/shevchenko-mobile@2x-900.webp 900w"
+									type="image/webp" sizes="450px" media="(max-width: 767px)">
+								<source srcset="./images/team/shevchenko-mobile-450.jpg 450w, ./images/team/shevchenko-mobile@2x-900.jpg 900w"
+									type="image/jpg" sizes="450px" media="(max-width: 767px)">
+								<source srcset="./images/team/shevchenko-desktop-270.webp 270w, ./images/team/shevchenko-desktop@2x-540.webp 540w"
+									type="image/webp" sizes="270px" media="(min-width: 1200px)">
+								<source srcset="./images/team/shevchenko-desktop-270.jpg 270w, ./images/team/shevchenko-desktop@2x-540.jpg 540w"
+									type="image/jpg" sizes="270px" media="(min-width: 1200px)">
+								<source srcset="./images/team/shevchenko-tablet-354.webp 354w, ./images/team/shevchenko-tablet@2x-708.webp 708w"
+									type="image/webp" sizes="354px" media="(min-width: 768px)">
+								<source srcset="./images/team/shevchenko-tablet-354.jpg 354w, ./images/team/shevchenko-tablet@2x-708.jpg 708w"
+									type="image/jpg" sizes="354px" media="(min-width: 768px)">
+							<img class="team-card__image" src="./images/team/shevchenko-mobile.jpg" alt="Андрей Шевченко">
 							</picture>
 							<h3 class="team-card__title">Андрей Шевченко</h3>
 							<p class="team-card__text">Marketing</p>
@@ -311,19 +340,19 @@
 						</li>
 						<li class="team-card">
 							<picture>
-								<source srcset="./images/team/nikolaev-mobile-450.webp 1x, ./images/team/nikolaev-mobile@2x-900.webp 2x,"
-									type="image/webp" media="(max-width: 767px)">
-								<source srcset="./images/team/nikolaev-mobile-450.jpg 1x, ./images/team/nikolaev-mobile@2x-900.jpg 2x,"
-									type="image/jpg" media="(max-width: 767px)">
-								<source srcset="./images/team/nikolaev-desktop-270.webp 1x, ./images/team/nikolaev-desktop@2x-540.webp 2x,"
-									type="image/webp" media="(min-width: 1200px)">
-								<source srcset="./images/team/nikolaev-desktop-270.jpg 1x, ./images/team/nikolaev-desktop@2x-540.jpg 2x,"
-									type="image/jpg" media="(min-width: 1200px)">
-								<source srcset="./images/team/nikolaev-tablet-354.webp 1x, ./images/team/nikolaev-tablet@2x-708.webp 2x,"
-									type="image/webp" media="(min-width: 768px)">
-								<source srcset="./images/team/nikolaev-tablet-354.jpg 1x, ./images/team/nikolaev-tablet@2x-708.jpg 2x,"
-									type="image/jpg" media="(min-width: 768px)">
-							<img class="team-card__image" src="./images/team/nikolaev-mobile.jpg" alt="Иван Николаев" width="450">
+								<source srcset="./images/team/nikolaev-mobile-450.webp 450w, ./images/team/nikolaev-mobile@2x-900.webp 900w"
+									type="image/webp" sizes="450px" media="(max-width: 767px)">
+								<source srcset="./images/team/nikolaev-mobile-450.jpg 450w, ./images/team/nikolaev-mobile@2x-900.jpg 900w"
+									type="image/jpg" sizes="450px" media="(max-width: 767px)">
+								<source srcset="./images/team/nikolaev-desktop-270.webp 270w, ./images/team/nikolaev-desktop@2x-540.webp 540w"
+									type="image/webp" sizes="270px" media="(min-width: 1200px)">
+								<source srcset="./images/team/nikolaev-desktop-270.jpg 270w, ./images/team/nikolaev-desktop@2x-540.jpg 540w"
+									type="image/jpg" sizes="270px" media="(min-width: 1200px)">
+								<source srcset="./images/team/nikolaev-tablet-354.webp 354w, ./images/team/nikolaev-tablet@2x-708.webp 708w"
+									type="image/webp" sizes="354px" media="(min-width: 768px)">
+								<source srcset="./images/team/nikolaev-tablet-354.jpg 354w, ./images/team/nikolaev-tablet@2x-708.jpg 708w"
+									type="image/jpg" sizes="354px" media="(min-width: 768px)">
+							<img class="team-card__image" src="./images/team/nikolaev-mobile.jpg" alt="Иван Николаев">
 							</picture>
 							<h3 class="team-card__title">Иван Николаев</h3>
 							<p class="team-card__text">UI Designer</p>
@@ -482,7 +511,7 @@
 				</svg>
 			</button>
 			<b class="form__title">Оставьте свои данные, мы вам перезвоним</b>
-			<form class="form js-speaker-form" action="" autocomplete="off">
+			<form class="form js-speaker-form" autocomplete="off">
 				<label class="form__field">
 					<input class="form__input interactive" type="text" name="name" placeholder=" ">
 					<span class="form__label">Имя</span>
